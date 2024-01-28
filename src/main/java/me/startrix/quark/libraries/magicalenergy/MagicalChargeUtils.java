@@ -1,4 +1,4 @@
-package me.startrix.quark.libraries.energy;
+package me.startrix.quark.libraries.magicalenergy;
 
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.commons.lang.Validate;

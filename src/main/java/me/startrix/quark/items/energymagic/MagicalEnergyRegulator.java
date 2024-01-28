@@ -1,29 +1,29 @@
-package me.startrix.quark.libraries.magicalenergy;
+package me.startrix.quark.items.energymagic;
 
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemHandler;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.HologramOwner;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockPlaceHandler;
 import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNet;
+import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.handlers.SimpleBlockBreakHandler;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
 import org.bukkit.block.Block;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
+import static me.startrix.quark.ItemsDefine.*;
+
 public class MagicalEnergyRegulator extends SlimefunItem implements HologramOwner {
     @ParametersAreNonnullByDefault
-    public MagicalEnergyRegulator(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
-        super(itemGroup, item, recipeType, recipe);
-        this.addItemHandler(new ItemHandler[]{this.onBreak()});
+    public MagicalEnergyRegulator() {
+        super(CategoryEnergyMagic,Magical_Energy_Regulator,RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[]{null,null, SlimefunItems.AIR_RUNE,null,null,SlimefunItems.MAGIC_LUMP_3,null,null,null});
+        this.addItemHandler(this.onBreak());
     }
 
     @Nonnull
@@ -52,7 +52,7 @@ public class MagicalEnergyRegulator extends SlimefunItem implements HologramOwne
             }
 
             public void tick(Block b, SlimefunItem item, Config data) {
-                io.github.thebusybiscuit.slimefun4.implementation.items.electric.EnergyRegulator.this.tick(b);
+                MagicalEnergyRegulator.this.tick(b);
             }
         }});
     }
