@@ -1,0 +1,6 @@
+name: Quark
+version: '1.0'
+main: me.startrix.quark.Main
+api-version: '1.20'
+depend:
+  - Slimefun
