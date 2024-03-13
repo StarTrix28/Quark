@@ -1,5 +1,6 @@
 package me.startrix.atom.items.machines;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AContainer;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -13,7 +14,7 @@ import static me.startrix.atom.ItemsDefine.Cobble_Generator;
 public final class StoneGenerator extends AContainer {
         public static final int TIME = 1;
         public StoneGenerator() {
-            super(CategoryAdvancedElectricity,Cobble_Generator, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{new ItemStack(Material.REDSTONE), new ItemStack(Material.REDSTONE), new ItemStack(Material.REDSTONE), new ItemStack(Material.COBBLESTONE),null, new ItemStack(Material.COBBLESTONE), null,null, null});
+            super(CategoryAdvancedElectricity,Cobble_Generator,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"),new ItemStack[]{});
         }
         protected void registerDefaultRecipes() {
             registerRecipe(1,null, new ItemStack(Material.STONE));

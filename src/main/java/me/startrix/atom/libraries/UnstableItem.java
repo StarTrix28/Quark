@@ -8,7 +8,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class UnstableItem extends SlimefunItem {
     private int stability;
-    public UnstableItem(ItemGroup itemGroup, SlimefunItemStack item, int stability, RecipeType recipeType, ItemStack[] recipe, int stability1) {
+    public UnstableItem(ItemGroup itemGroup, SlimefunItemStack item, int stability, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
         this.stability = stability;
     }

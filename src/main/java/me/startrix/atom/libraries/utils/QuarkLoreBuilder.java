@@ -29,12 +29,12 @@ public class QuarkLoreBuilder {
     }
     public static String Stability(int unstableint) {
         String s = "&f&lHey, do it the right way! (0-6)";
-        if (unstableint == 0) s = "&f&lStability: &a&l#####";
-        else if (unstableint == 1) s = "&f&lStability: &4&l#&a&l####";
-        else if (unstableint == 2) s = "&f&lStability: &4&l##&a&l###";
-        else if (unstableint == 3) s = "&f&lStability: &4&l###&a&l##";
-        else if (unstableint == 4) s = "&f&lStability: &4&l####&a&l#";
-        else if (unstableint == 5) s = "&f&lStability: &4&l#####";
+        if (unstableint == 0) s = "&f&lStability: &a&l¦¦¦¦¦";
+        else if (unstableint == 1) s = "&f&lStability: &4&l¦&a&l¦¦¦¦";
+        else if (unstableint == 2) s = "&f&lStability: &4&l¦¦&a&l¦¦¦";
+        else if (unstableint == 3) s = "&f&lStability: &4&l¦¦¦&a&l¦¦";
+        else if (unstableint == 4) s = "&f&lStability: &4&l¦¦¦¦&a&l¦";
+        else if (unstableint == 5) s = "&f&lStability: &4&l¦¦¦¦¦";
         else if (unstableint == 6) s = "&f&lStability: &4&lERROR";
         return s;
     }

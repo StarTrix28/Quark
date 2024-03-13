@@ -5,9 +5,11 @@ import io.github.thebusybiscuit.slimefun4.core.handlers.BlockUseHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.SimpleSlimefunItem;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.common.ChatColors;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.startrix.atom.libraries.magicalenergy.MagicalEnergyNet;
 import me.startrix.atom.libraries.magicalenergy.MagicalEnergyNetComponent;
 import me.startrix.atom.libraries.magicalenergy.MagicalEnergyNetComponentType;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -20,7 +22,7 @@ import static me.startrix.atom.ItemsDefine.*;
 public class MagicalEnergyConnector extends SimpleSlimefunItem<BlockUseHandler> implements MagicalEnergyNetComponent {
     @ParametersAreNonnullByDefault
     public MagicalEnergyConnector() {
-        super(CategoryEnergyMagic,Magical_Energy_Connector,RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[]{null,null, SlimefunItems.AIR_RUNE,null,null,SlimefunItems.MAGIC_LUMP_2,null,null,null});
+        super(CategoryEnergyMagic,Magical_Energy_Connector,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"),new ItemStack[]{});
     }
 
     @Nonnull

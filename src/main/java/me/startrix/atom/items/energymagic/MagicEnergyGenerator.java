@@ -4,6 +4,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineFuel;
 import me.startrix.atom.ItemsDefine;
 import me.startrix.atom.libraries.magicalenergy.AMagicalGenerator;
@@ -19,7 +20,7 @@ import static me.startrix.atom.ItemsDefine.Magical_Energy_Generator;
 public class MagicEnergyGenerator  extends AMagicalGenerator {
     @ParametersAreNonnullByDefault
     public MagicEnergyGenerator() {
-        super(CategoryEnergyMagic, Magical_Energy_Generator, RecipeType.MAGIC_WORKBENCH, new ItemStack[]{null, null, null, null, SlimefunItems.MAGIC_LUMP_3, null, null, null, null});
+        super(CategoryEnergyMagic, Magical_Energy_Generator,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"),new ItemStack[]{});
     }
 
     @NotNull

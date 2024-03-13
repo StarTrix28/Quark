@@ -8,8 +8,8 @@ import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import org.bukkit.inventory.ItemStack;
 
 public class LiquidBucketItem extends UnstableItem {
-    public LiquidBucketItem(ItemGroup itemGroup, SlimefunItemStack item, int stability, RecipeType recipeType, ItemStack[] recipe, int stability1) {
-        super(itemGroup, item, stability, recipeType, recipe, stability1);
+    public LiquidBucketItem(ItemGroup itemGroup, SlimefunItemStack item, int stability, RecipeType recipeType, ItemStack[] recipe) {
+        super(itemGroup, item, stability, recipeType, recipe);
     }
     @Override
     public void preRegister() {

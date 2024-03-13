@@ -15,35 +15,29 @@ import me.startrix.atom.libraries.utils.QuarkLoreBuilder;
 import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.jetbrains.annotations.NotNull;
 
-import javax.naming.Name;
-
-import java.util.function.Consumer;
-
-import static org.bukkit.enchantments.Enchantment.*;
-
+import static org.bukkit.enchantments.Enchantment.DIG_SPEED;
+import static org.bukkit.enchantments.Enchantment.DURABILITY;
 public final class ItemsDefine {
-    public static final NestedItemGroup Quark = new NestedItemGroup(new NamespacedKey(NamespacedKey.BUKKIT,"quark"),new CustomItemStack(Material.DIAMOND,"&4Quark"));
-    public static final SubItemGroup CategoryBasic = new SubItemGroup(new NamespacedKey(NamespacedKey.BUKKIT, "quark-basic"), Quark, new CustomItemStack(new ItemStack(Material.LEATHER_CHESTPLATE),Color.fromRGB(64,23,0),"Basic"));
-    public static final SubItemGroup CategoryTools = new SubItemGroup(new NamespacedKey(NamespacedKey.BUKKIT,"quark-tools"),Quark,new CustomItemStack(Material.IRON_PICKAXE,"Tools"));
-    public static final SubItemGroup CategoryMultiblock = new SubItemGroup(new NamespacedKey(NamespacedKey.BUKKIT,"quark-multiblock"),Quark,new CustomItemStack(Material.CRAFTING_TABLE,"MultiBlocks"));
-    public static final SubItemGroup CategoryAdvancedElectricity = new SubItemGroup(new NamespacedKey(NamespacedKey.BUKKIT, "quark-advanced_energy_and_electricity"), Quark, new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWFjNTI0MTliOTkwMjU4MjhjODlmYTgyNTk0NWU2OTQ4ZTQ1YmI1YTIyZTQ0MjVhNTllOTA5NmU0YzFhYzM4In19fQ==")),"Advanced Energy and Electricity [WIP]"));
-    public static final SubItemGroup CategoryTechnicalGear = new SubItemGroup(new NamespacedKey(NamespacedKey.BUKKIT,"quark-technicalgear"),Quark,new CustomItemStack(Material.BLAZE_ROD,"Technical Gear [WIP]"));
-    public static final SubItemGroup CategoryMiscellaneous = new SubItemGroup(new NamespacedKey(NamespacedKey.BUKKIT,"quark-miscellaneous"),Quark,new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDhlNjUyNTM4NWY3NDgzMjJlZWNjNDE2ODliNjkwYWExZWJiYjIxNzJlYzJjNGEyZWFjMTRmMjJkOTRlZTNiYSJ9fX0=")),"Miscellaneous"));
 
-    public static final NestedItemGroup QuarkMagic = new NestedItemGroup(new NamespacedKey(NamespacedKey.BUKKIT,"quarkmagic"),new CustomItemStack(Material.GLOWSTONE,"Quark - Magic [WIP]"));
-    public static final SubItemGroup CategoryEssences = new SubItemGroup(new NamespacedKey(NamespacedKey.BUKKIT,"quarkmagic-essences"),QuarkMagic,new CustomItemStack(Material.NETHER_STAR,"Essences"));
-    public static final SubItemGroup CategoryMagicalResources = new SubItemGroup(new NamespacedKey(NamespacedKey.BUKKIT,"quarkmagic-resources"),QuarkMagic,new CustomItemStack(Material.GOLD_INGOT,"Resources"));
-    public static final SubItemGroup CategoryMagic = new SubItemGroup(new NamespacedKey(NamespacedKey.BUKKIT, "quarkmagic-magic"), QuarkMagic,new CustomItemStack(new ItemStack(Material.FIREWORK_STAR),Color.PURPLE,"Magic"));
-    public static final SubItemGroup CategoryMagicalMachines = new SubItemGroup(new NamespacedKey(NamespacedKey.BUKKIT,"quarkmagic-machines"),QuarkMagic,new CustomItemStack(Material.FURNACE,"Machines"));
-    public static final SubItemGroup CategoryEnergyMagic = new SubItemGroup(new NamespacedKey(NamespacedKey.BUKKIT, "quarkmagic-energymagic"), QuarkMagic,new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmMzZDY4YTYyZDMyZjZhODViNzhiN2U2OThmN2M3MzgzNTRlZjc4MzVkMTRkZWYwYjk0OGVjZWYxMzQwMTYzNiJ9fX0=")),"Energy Magic"));
+    public static final NestedItemGroup Quark = new NestedItemGroup(new NamespacedKey(Main.getInstance(),"quark"),new CustomItemStack(Material.DIAMOND,"&4Quark"));
+    public static final SubItemGroup CategoryBasic = new SubItemGroup(new NamespacedKey(Main.getInstance(), "quark-basic"), Quark, new CustomItemStack(new ItemStack(Material.LEATHER_CHESTPLATE),Color.fromRGB(64,23,0),"Basic"));
+    public static final SubItemGroup CategoryTools = new SubItemGroup(new NamespacedKey(Main.getInstance(),"quark-tools"),Quark,new CustomItemStack(Material.IRON_PICKAXE,"Tools"));
+    public static final SubItemGroup CategoryMultiblock = new SubItemGroup(new NamespacedKey(Main.getInstance(),"quark-multiblock"),Quark,new CustomItemStack(Material.CRAFTING_TABLE,"MultiBlocks"));
+    public static final SubItemGroup CategoryAdvancedElectricity = new SubItemGroup(new NamespacedKey(Main.getInstance(), "quark-advanced_energy_and_electricity"), Quark, new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWFjNTI0MTliOTkwMjU4MjhjODlmYTgyNTk0NWU2OTQ4ZTQ1YmI1YTIyZTQ0MjVhNTllOTA5NmU0YzFhYzM4In19fQ==")),"Advanced Energy and Electricity [WIP]"));
+    public static final SubItemGroup CategoryTechnicalGear = new SubItemGroup(new NamespacedKey(Main.getInstance(),"quark-technicalgear"),Quark,new CustomItemStack(Material.BLAZE_ROD,"Technical Gear [WIP]"));
+    public static final SubItemGroup CategoryMiscellaneous = new SubItemGroup(new NamespacedKey(Main.getInstance(),"quark-miscellaneous"),Quark,new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDhlNjUyNTM4NWY3NDgzMjJlZWNjNDE2ODliNjkwYWExZWJiYjIxNzJlYzJjNGEyZWFjMTRmMjJkOTRlZTNiYSJ9fX0=")),"Miscellaneous"));
 
-    public static final NestedItemGroup QuarkFluids = new NestedItemGroup(new NamespacedKey(NamespacedKey.BUKKIT,"quarkfluids"),new CustomItemStack(Material.WATER_BUCKET,"Quark - Fluids [WIP]"));
-    public static final SubItemGroup Pipes = new SubItemGroup(new NamespacedKey(NamespacedKey.BUKKIT,"quarkpipes-pipes"),QuarkFluids,new CustomItemStack(Material.BUCKET,"Pipes"));
+    public static final NestedItemGroup QuarkMagic = new NestedItemGroup(new NamespacedKey(Main.getInstance(),"quarkmagic"),new CustomItemStack(Material.GLOWSTONE,"Quark - Magic [WIP]"));
+    public static final SubItemGroup CategoryEssences = new SubItemGroup(new NamespacedKey(Main.getInstance(),"quarkmagic-essences"),QuarkMagic,new CustomItemStack(Material.NETHER_STAR,"Essences"));
+    public static final SubItemGroup CategoryMagicalResources = new SubItemGroup(new NamespacedKey(Main.getInstance(),"quarkmagic-resources"),QuarkMagic,new CustomItemStack(Material.GOLD_INGOT,"Resources"));
+    public static final SubItemGroup CategoryMagic = new SubItemGroup(new NamespacedKey(Main.getInstance(), "quarkmagic-magic"), QuarkMagic,new CustomItemStack(new ItemStack(Material.FIREWORK_STAR),Color.PURPLE,"Magic"));
+    public static final SubItemGroup CategoryMagicalMachines = new SubItemGroup(new NamespacedKey(Main.getInstance(),"quarkmagic-machines"),QuarkMagic,new CustomItemStack(Material.FURNACE,"Machines"));
+    public static final SubItemGroup CategoryEnergyMagic = new SubItemGroup(new NamespacedKey(Main.getInstance(), "quarkmagic-energymagic"), QuarkMagic,new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmMzZDY4YTYyZDMyZjZhODViNzhiN2U2OThmN2M3MzgzNTRlZjc4MzVkMTRkZWYwYjk0OGVjZWYxMzQwMTYzNiJ9fX0=")),"Energy Magic"));
+
+    public static final NestedItemGroup QuarkFluids = new NestedItemGroup(new NamespacedKey(Main.getInstance(),"quarkfluids"),new CustomItemStack(Material.WATER_BUCKET,"Quark - Fluids [WIP]"));
+    public static final SubItemGroup Pipes = new SubItemGroup(new NamespacedKey(Main.getInstance(),"quarkpipes-pipes"),QuarkFluids,new CustomItemStack(Material.BUCKET,"Pipes"));
     //Basic
     public static final SlimefunItemStack Wooden_Helmet;
     public static final SlimefunItemStack Wooden_Chestplate;
@@ -54,6 +48,7 @@ public final class ItemsDefine {
     public static final SlimefunItemStack Hammer;
     //Multiblock
     public static final SlimefunItemStack KiloMiner;
+    public static final SlimefunItemStack MegaMiner;
     //Machines
     public static final SlimefunItemStack Solar_Generator5;
     public static final SlimefunItemStack Solar_Generator6;
@@ -96,6 +91,8 @@ public final class ItemsDefine {
     public static final SlimefunItemStack ConcentratedFireChargeS;
     public static final SlimefunItemStack Block_of_Blistering_Ingot;
     public static final SlimefunItemStack Boosted_ElectroMagnet;
+    public static final SlimefunItemStack Golden_Rod;
+    public static final SlimefunItemStack RedstoneAlloy_Plate;
     //Resources
 
 
@@ -105,10 +102,16 @@ public final class ItemsDefine {
 
     //Essences
     public static final SlimefunItemStack MagicalEssence;
+    public static final SlimefunItemStack StabilityEssence;
+    public static final SlimefunItemStack HeatEssence;
+    public static final SlimefunItemStack ColdEssence;
+    public static final SlimefunItemStack RedEssence;
+    public static final SlimefunItemStack DarkEssence;
     //MagicResources
     public static final SlimefunItemStack Magic_Rune;
     public static final SlimefunItemStack MagicalGlowstoneDust;
     public static final SlimefunItemStack MagicalGlowstone;
+    public static final SlimefunItemStack MagicGlass;
     //Magic
     public static final SlimefunItemStack MagicStone;
     public static final SlimefunItemStack MagicWandIron;
@@ -136,6 +139,7 @@ public final class ItemsDefine {
         Hammer = new SlimefunItemStack("HAMMER",Material.IRON_AXE,"Hammer");
         //Multiblock
         KiloMiner = new SlimefunItemStack("KILO_MINER",Material.NETHERITE_PICKAXE,"Kilo Miner", "", "&fThis Multiblock will mine any Ores", "&fin a 15x15 area underneath it.", "&fPlace coal in", "&fits chest to fuel this machine.", "", "&a+ Silk Touch");
+        MegaMiner = new SlimefunItemStack("MEGA_MINER",Material.NETHERITE_PICKAXE,"Mega Miner", "", "&fThis Multiblock will mine any Ores", "&fin a 20x20 area underneath it.", "&fPlace coal in", "&fits chest to fuel this machine.", "", "&a+ Silk Touch");
         //Advanced Energy and Electricity
         Solar_Generator5 = new SlimefunItemStack("SOLAR_GENERATOR5", Material.DAYLIGHT_DETECTOR, "&bHighlyEnergized Solar Generator", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR), LoreBuilder.powerBuffer(0),LoreBuilder.powerPerSecond(512) + " (Day)", LoreBuilder.powerPerSecond(256) + " (Night)");
         Solar_Generator6 = new SlimefunItemStack("SOLAR_GENERATOR6", Material.DAYLIGHT_DETECTOR, "&bHyperEnergized Solar Generator", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR), LoreBuilder.powerBuffer(0),LoreBuilder.powerPerSecond(1024) + " (Day)", LoreBuilder.powerPerSecond(512) + " (Night)");
@@ -178,17 +182,25 @@ public final class ItemsDefine {
         Iron_Cap = new SlimefunItemStack("IRON_CAP",Material.IRON_INGOT,"Iron Cap");
         Block_of_Blistering_Ingot = new SlimefunItemStack("BLOCKOF_BLISTERING_INGOT",Material.GOLD_BLOCK,"Block of Blistering Ingot","&e&lAlmost Unstable",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY));
         Boosted_ElectroMagnet = new SlimefunItemStack("BOOSTED_ELECTROMAGNET",HeadTexture.MAGNET,"Boosted ElectroMagnet");
+        Golden_Rod = new SlimefunItemStack("GOLDENROD",Material.BLAZE_ROD,"Golden Rod");
+        RedstoneAlloy_Plate = new SlimefunItemStack("REDSTONEALLOY_PLATE",Material.BRICK,"Redstone Alloy Plate");
 
         //Magic
 
         //Essences
-        MagicalEssence = new SlimefunItemStack("MAGICAL_ESSENCE",Material.NETHER_STAR,"Magical Essence","Most Essential Magical Item");
+        MagicalEssence = new SlimefunItemStack("MAGICAL_ESSENCE",Material.NETHER_STAR,"Magical Essence","Most Essential Magical Item",QuarkLoreBuilder.Stability(0));
+        StabilityEssence = new SlimefunItemStack("STABILITY_ESSENCE",Material.NETHER_STAR,"Stability Essence",QuarkLoreBuilder.Stability(0),"Perfect");
+        HeatEssence = new SlimefunItemStack("HEAT_ESSENCE",Material.NETHER_STAR,"Heat Essence",QuarkLoreBuilder.Stability(3));
+        ColdEssence = new SlimefunItemStack("COLD_ESSENCE",Material.NETHER_STAR,"Cold Essence",QuarkLoreBuilder.Stability(3));
+        RedEssence = new SlimefunItemStack("RED_ESSENCE",Material.NETHER_STAR,"Red Essence",QuarkLoreBuilder.Stability(5));
+        DarkEssence = new SlimefunItemStack("DARK_ESSENCE",Material.BLACK_DYE,"Dark Essence",QuarkLoreBuilder.Stability(6));
         //MagicalResources
-        Magic_Rune = new SlimefunItemStack("MAGIC_RUNE",Material.FIREWORK_STAR,Color.PURPLE,"&5Magic Rune");
-        MagicalGlowstoneDust = new SlimefunItemStack("MAGICAL_GLOWSTONE_DUST",Material.GLOWSTONE_DUST,"Magical Glowstone Dust");
-        MagicalGlowstone = new SlimefunItemStack("MAGICAL_GLOWSTONE",Material.GLOWSTONE,"Magical Glowstone");
+        Magic_Rune = new SlimefunItemStack("MAGIC_RUNE",Material.FIREWORK_STAR,Color.PURPLE,"&5Magic Rune",QuarkLoreBuilder.Stability(0));
+        MagicalGlowstoneDust = new SlimefunItemStack("MAGICAL_GLOWSTONE_DUST",Material.GLOWSTONE_DUST,"Magical Glowstone Dust",QuarkLoreBuilder.Stability(1));
+        MagicalGlowstone = new SlimefunItemStack("MAGICAL_GLOWSTONE",Material.GLOWSTONE,"Magical Glowstone",QuarkLoreBuilder.Stability(1));
+        MagicGlass = new SlimefunItemStack("MAGIC_GLASS",Material.GLASS_PANE,"MaGlass","Glass that can hold Magic","without any troubles");
         //Magic
-        MagicStone = new SlimefunItemStack("MAGIC_STONE",Material.STONE,"Magic Stone");
+        MagicStone = new SlimefunItemStack("MAGIC_STONE",Material.STONE,"Magic Stone",QuarkLoreBuilder.Stability(1));
         MagicWandIron = new SlimefunItemStack("MAGIC_WAND",Material.STICK,"Magic Wand","&5Caps Material - &fIron", QuarkLoreBuilder.powerCharged(0,16));
         MagicCrucible = new SlimefunItemStack("MAGIC_CRUCIBLE",Material.CAULDRON,"Magic Crucible");
         MagicWater = new SlimefunItemStack("MAGIC_WATER",Material.WATER_BUCKET,"Magic Water Bucket","Essential Item in Magic Crucible");
