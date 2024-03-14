@@ -6,6 +6,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.groups.SubItemGroup;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineTier;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactivity;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerHead;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerSkin;
@@ -68,6 +69,18 @@ public final class ItemsDefine {
     public static final SlimefunItemStack Capacitor12;
     public static final SlimefunItemStack Capacitor13;
     public static final SlimefunItemStack Capacitor14;
+    public static final SlimefunItemStack CoalGenerator3;
+    public static final SlimefunItemStack CoalGenerator4;
+    public static final SlimefunItemStack CoalGenerator5;
+    public static final SlimefunItemStack ElectricGoldenPan4;
+    public static final SlimefunItemStack ElectricGoldenPan5;
+    public static final SlimefunItemStack ElectricGoldenPan6;
+    public static final SlimefunItemStack ElectricDustWasher4;
+    public static final SlimefunItemStack ElectricDustWasher5;
+    public static final SlimefunItemStack ElectricDustWasher6;
+    public static final SlimefunItemStack ElectricIngotFactory4;
+    public static final SlimefunItemStack ElectricIngotFactory5;
+    public static final SlimefunItemStack ElectricIngotFactory6;
     public static final SlimefunItemStack PowerCube1;
     public static final SlimefunItemStack PowerCube2;
     public static final SlimefunItemStack PowerCube3;
@@ -126,6 +139,7 @@ public final class ItemsDefine {
     public static final SlimefunItemStack Basic_Magic_Capacitor;
     public static final SlimefunItemStack Advanced_Magic_Capacitor;
 
+
     ItemsDefine() {
     }
     static {
@@ -163,7 +177,20 @@ public final class ItemsDefine {
         PowerCube2 = new SlimefunItemStack("POWERCUBE2",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE2YjY4Mzc2YzE4MWM5YTczNDNmZWUzNjk3ZmFhY2VjMzUxMjlmYjY0ZGU1OTE0YmRiZjg2OWM2NTJjIn19fQ==")),"[WIP] Power Cube II",LoreBuilder.powerCharged(0,512));
         PowerCube3 = new SlimefunItemStack("POWERCUBE3",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE2YjY4Mzc2YzE4MWM5YTczNDNmZWUzNjk3ZmFhY2VjMzUxMjlmYjY0ZGU1OTE0YmRiZjg2OWM2NTJjIn19fQ==")),"[WIP] Power Cube III",LoreBuilder.powerCharged(0,2048));
         PowerCube4 = new SlimefunItemStack("POWERCUBE4",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE2YjY4Mzc2YzE4MWM5YTczNDNmZWUzNjk3ZmFhY2VjMzUxMjlmYjY0ZGU1OTE0YmRiZjg2OWM2NTJjIn19fQ==")),"[WIP] Power Cube IV",LoreBuilder.powerCharged(0,8192));
+        CoalGenerator3 = new SlimefunItemStack("COAL_GENERATOR3", HeadTexture.GENERATOR, "&cCoal Generator III", "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.GENERATOR), LoreBuilder.powerBuffer(512), LoreBuilder.powerPerSecond(32));
+        CoalGenerator4 = new SlimefunItemStack("COAL_GENERATOR4", HeadTexture.GENERATOR, "&cCoal Generator IV", "", LoreBuilder.machine(MachineTier.GOOD, MachineType.GENERATOR), LoreBuilder.powerBuffer(1024), LoreBuilder.powerPerSecond(64));
+        CoalGenerator5 = new SlimefunItemStack("COAL_GENERATOR5", HeadTexture.GENERATOR, "&cCoal Generator V", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR), LoreBuilder.powerBuffer(2048), LoreBuilder.powerPerSecond(128));
+        ElectricGoldenPan4 = new SlimefunItemStack("ELECTRIC_GOLD_PAN4", Material.BROWN_TERRACOTTA, "&6Electric Gold Pan IV", new String[]{"", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(15), LoreBuilder.powerPerSecond(12)});
+        ElectricGoldenPan5 = new SlimefunItemStack("ELECTRIC_GOLD_PAN5", Material.BROWN_TERRACOTTA, "&6Electric Gold Pan V", new String[]{"", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(20), LoreBuilder.powerPerSecond(16)});
+        ElectricGoldenPan6 = new SlimefunItemStack("ELECTRIC_GOLD_PAN6", Material.BROWN_TERRACOTTA, "&6Electric Gold Pan VI", new String[]{"", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(50), LoreBuilder.powerPerSecond(32)});
+        ElectricDustWasher4 = new SlimefunItemStack("ELECTRIC_DUST_WASHER4", Material.BLUE_STAINED_GLASS, "&3Electric Dust Washer IV", new String[]{"", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), LoreBuilder.speed(15), LoreBuilder.powerPerSecond(32)});
+        ElectricDustWasher5 = new SlimefunItemStack("ELECTRIC_DUST_WASHER5", Material.BLUE_STAINED_GLASS, "&3Electric Dust Washer V", new String[]{"", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), LoreBuilder.speed(20), LoreBuilder.powerPerSecond(48)});
+        ElectricDustWasher6 = new SlimefunItemStack("ELECTRIC_DUST_WASHER6", Material.BLUE_STAINED_GLASS, "&3Electric Dust Washer VI", new String[]{"", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), LoreBuilder.speed(50), LoreBuilder.powerPerSecond(64)});
+        ElectricIngotFactory4 = new SlimefunItemStack("ELECTRIC_INGOT_FACTORY4", Material.RED_TERRACOTTA, "&cElectric Ingot Factory IV", new String[]{"", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(10), LoreBuilder.powerPerSecond(24)});
+        ElectricIngotFactory5 = new SlimefunItemStack("ELECTRIC_INGOT_FACTORY5", Material.RED_TERRACOTTA, "&cElectric Ingot Factory V", new String[]{"", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(15), LoreBuilder.powerPerSecond(32)});
+        ElectricIngotFactory6 = new SlimefunItemStack("ELECTRIC_INGOT_FACTORY6", Material.RED_TERRACOTTA, "&cElectric Ingot Factory VI", new String[]{"", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(20), LoreBuilder.powerPerSecond(48)});
         Cobble_Generator = new SlimefunItemStack("COBBLE_GENERATOR",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjVjOTc2MjcyOWQ0OGQwYTE2ZmU4OTU3M2JkZDJmYWY1MDE5NmZlYTE1ZDQ5YjVhNmJmZWE0ODliZTcxIn19fQ==")),"Cobble Generator");
+
         //TechnicalGear
         EnergyRod1 = new SlimefunItemStack("ENERGYROD1",Material.GOLDEN_SWORD,"Energy Rod I",LoreBuilder.powerCharged(0,128));
         EnergyRod2 = new SlimefunItemStack("ENERGYROD2",Material.GOLDEN_SWORD,"Energy Rod II",LoreBuilder.powerCharged(0,512));

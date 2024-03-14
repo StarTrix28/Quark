@@ -18,8 +18,8 @@ import org.jetbrains.annotations.NotNull;
 import static me.startrix.atom.ItemsDefine.*;
 public class EssenceGrinder extends AContainer {
     private static final int[] border = new int[]{0,8,9,17,18,26,27,28,29,33,34,35,36,37,38,42,43,44};
-    private static final int[] inputBorder = new int[]{1,7,10,16,19,20,21,22,23,24,25};
-    private static final int[] outputBorder = new int[]{30,31,32,39,41};
+    private static final int[] inputBorder = new int[]{30,31,32,39,41};
+    private static final int[] outputBorder = new int[]{1,7,10,16,19,20,21,22,23,24,25};
 
     public EssenceGrinder() {
         super(CategoryMagicalMachines,MEssenceGrinder,RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[]{SlimefunItems.REDSTONE_ALLOY,SlimefunItems.SMALL_CAPACITOR,SlimefunItems.REDSTONE_ALLOY,new ItemStack(Material.IRON_BLOCK),null,new ItemStack(Material.IRON_BLOCK),SlimefunItems.REDSTONE_ALLOY,new ItemStack(Material.GRINDSTONE),SlimefunItems.REDSTONE_ALLOY});
