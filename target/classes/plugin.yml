@@ -1,9 +1,11 @@
 name: Quark
-version: '1.0'
-main: me.startrix.atom.Main
+version: '0.5.2'
+main: me.startrix.quark.Quark
 api-version: '1.20'
 depend:
   - Slimefun
+softdepend:
+  - FluffyMachines
 commands:
   itemstack:
     description: This is a dev command.
