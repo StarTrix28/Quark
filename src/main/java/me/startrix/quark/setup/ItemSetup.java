@@ -80,8 +80,8 @@ public class ItemSetup {
         this.registerShovel(CategoryGear,Obsidian_Shovel,new ItemStack(Material.OBSIDIAN));
     }
     private void registerMultiBlock() {
-        (new IndustrialMiner(CategoryMultiblock,KiloMiner,Material.ANCIENT_DEBRIS,true,15)).register(this.plugin);
-        (new IndustrialMiner(CategoryMultiblock,MegaMiner,Material.NETHERITE_BLOCK,true,20)).register(this.plugin);
+        (new IndustrialMiner(CategoryMultiblock, KiloMiner, Material.ANCIENT_DEBRIS, true, 15)).register(this.plugin);
+        (new IndustrialMiner(CategoryMultiblock, MegaMiner, Material.NETHERITE_BLOCK, true, 20)).register(this.plugin);
     }
     private void registerAdvancedElectricity() {
         (new SolarGenerator(CategoryAdvancedElectricity,512,256,Solar_Generator5,RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[]{SlimefunItems.SOLAR_GENERATOR_4,SlimefunItems.REINFORCED_PLATE,SlimefunItems.SOLAR_GENERATOR_4,SlimefunItems.REINFORCED_PLATE,SlimefunItems.ELECTRIC_MOTOR,SlimefunItems.REINFORCED_PLATE,SlimefunItems.SOLAR_GENERATOR_4,SlimefunItems.REINFORCED_PLATE,SlimefunItems.SOLAR_GENERATOR_4})).register(this.plugin);
@@ -103,33 +103,30 @@ public class ItemSetup {
         (new Capacitor(CategoryAdvancedElectricity,128000000,Capacitor13,RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[]{Capacitor12,RedstoneAlloy_Plate,Capacitor12,RedstoneAlloy_Plate,Block_of_Blistering_Ingot,RedstoneAlloy_Plate,Capacitor12,RedstoneAlloy_Plate,Capacitor12})).register(plugin);
         (new Capacitor(CategoryAdvancedElectricity,256000000,Capacitor14,RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[]{Capacitor13,RedstoneAlloy_Plate,Capacitor13,RedstoneAlloy_Plate,Block_of_Blistering_Ingot,RedstoneAlloy_Plate,Capacitor13,RedstoneAlloy_Plate,Capacitor13})).register(plugin);
         (new PowerCube(128,PowerCube1,RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[]{SlimefunItems.REINFORCED_PLATE,Boosted_ElectroMagnet,SlimefunItems.REINFORCED_PLATE,Boosted_ElectroMagnet,SlimefunItems.BIG_CAPACITOR,Boosted_ElectroMagnet,SlimefunItems.REINFORCED_PLATE,Boosted_ElectroMagnet,SlimefunItems.REINFORCED_PLATE})).register(this.plugin);
-        (new CoalGenerator(CategoryAdvancedElectricity,CoalGenerator3,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"), new ItemStack[]{})).setCapacity(512).setEnergyProduction(32).register(plugin);
-        (new CoalGenerator(CategoryAdvancedElectricity,CoalGenerator4,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"), new ItemStack[]{})).setCapacity(1024).setEnergyProduction(64).register(plugin);
-        (new CoalGenerator(CategoryAdvancedElectricity,CoalGenerator5,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"), new ItemStack[]{})).setCapacity(2048).setEnergyProduction(128).register(plugin);
-        (new ElectricGoldPan(CategoryAdvancedElectricity,ElectricGoldenPan4,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"), new ItemStack[]{})).setCapacity(128).setEnergyConsumption(12).setProcessingSpeed(15).register(plugin);
-        (new ElectricGoldPan(CategoryAdvancedElectricity,ElectricGoldenPan5,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"), new ItemStack[]{})).setCapacity(128).setEnergyConsumption(16).setProcessingSpeed(20).register(plugin);
-        (new ElectricGoldPan(CategoryAdvancedElectricity,ElectricGoldenPan6,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"), new ItemStack[]{})).setCapacity(128).setEnergyConsumption(32).setProcessingSpeed(50).register(plugin);
-        (new ElectricDustWasher(CategoryAdvancedElectricity,ElectricDustWasher4,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"), new ItemStack[]{})).setCapacity(128).setEnergyConsumption(32).setProcessingSpeed(15).register(plugin);
-        (new ElectricDustWasher(CategoryAdvancedElectricity,ElectricDustWasher5,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"), new ItemStack[]{})).setCapacity(128).setEnergyConsumption(48).setProcessingSpeed(20).register(plugin);
-        (new ElectricDustWasher(CategoryAdvancedElectricity,ElectricDustWasher6,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"), new ItemStack[]{})).setCapacity(128).setEnergyConsumption(64).setProcessingSpeed(50).register(plugin);
-        (new ElectricIngotFactory(CategoryAdvancedElectricity,ElectricIngotFactory4,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"), new ItemStack[]{})).setCapacity(1024).setEnergyConsumption(24).setProcessingSpeed(10).register(plugin);
-        (new ElectricIngotFactory(CategoryAdvancedElectricity,ElectricIngotFactory5,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"), new ItemStack[]{})).setCapacity(1024).setEnergyConsumption(32).setProcessingSpeed(15).register(plugin);
-        (new ElectricIngotFactory(CategoryAdvancedElectricity,ElectricIngotFactory6,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"), new ItemStack[]{})).setCapacity(1024).setEnergyConsumption(48).setProcessingSpeed(20).register(plugin);
+        (new CoalGenerator(CategoryAdvancedElectricity,CoalGenerator3,RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{SlimefunItems.HEATING_COIL,Boosted_ElectroMagnet,SlimefunItems.HEATING_COIL,SlimefunItems.HEATING_COIL,SlimefunItems.COAL_GENERATOR_2,SlimefunItems.HEATING_COIL,SlimefunItems.STEEL_PLATE,SlimefunItems.STEEL_PLATE,SlimefunItems.STEEL_PLATE})).setCapacity(512).setEnergyProduction(32).register(plugin);
+        (new CoalGenerator(CategoryAdvancedElectricity,CoalGenerator4,RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{SlimefunItems.HEATING_COIL,Boosted_ElectroMagnet,SlimefunItems.HEATING_COIL,SlimefunItems.HEATING_COIL,CoalGenerator3,SlimefunItems.HEATING_COIL,SlimefunItems.STEEL_PLATE,new ItemStack(Material.BLAST_FURNACE),SlimefunItems.STEEL_PLATE})).setCapacity(1024).setEnergyProduction(64).register(plugin);
+        (new CoalGenerator(CategoryAdvancedElectricity,CoalGenerator5,RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{SlimefunItems.HEATING_COIL,SlimefunItems.COAL_GENERATOR,SlimefunItems.HEATING_COIL,SlimefunItems.HEATING_COIL,CoalGenerator4,SlimefunItems.HEATING_COIL,SlimefunItems.REDSTONE_ALLOY,new ItemStack(Material.LAVA_BUCKET),SlimefunItems.REINFORCED_ALLOY_INGOT})).setCapacity(2048).setEnergyProduction(128).register(plugin);
+        (new ElectricGoldPan(CategoryAdvancedElectricity,ElectricGoldenPan4,RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{SlimefunItems.REDSTONE_ALLOY, SlimefunItems.GOLD_PAN,SlimefunItems.REDSTONE_ALLOY,SlimefunItems.GOLD_PAN,SlimefunItems.ELECTRIC_GOLD_PAN_3,SlimefunItems.GOLD_PAN,SlimefunItems.REDSTONE_ALLOY,SlimefunItems.GOLD_PAN,SlimefunItems.REDSTONE_ALLOY})).setCapacity(128).setEnergyConsumption(12).setProcessingSpeed(15).register(plugin);
+        (new ElectricGoldPan(CategoryAdvancedElectricity,ElectricGoldenPan5,RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{SlimefunItems.REDSTONE_ALLOY, SlimefunItems.GOLD_PAN,SlimefunItems.REDSTONE_ALLOY,SlimefunItems.GOLD_PAN,ElectricGoldenPan4,SlimefunItems.GOLD_PAN,SlimefunItems.REDSTONE_ALLOY,SlimefunItems.GOLD_PAN,SlimefunItems.REDSTONE_ALLOY})).setCapacity(128).setEnergyConsumption(16).setProcessingSpeed(20).register(plugin);
+        (new ElectricDustWasher(CategoryAdvancedElectricity,ElectricDustWasher4,RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{})).setCapacity(128).setEnergyConsumption(32).setProcessingSpeed(15).register(plugin);
+        (new ElectricDustWasher(CategoryAdvancedElectricity,ElectricDustWasher5,RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{})).setCapacity(128).setEnergyConsumption(48).setProcessingSpeed(20).register(plugin);
+        (new ElectricIngotFactory(CategoryAdvancedElectricity,ElectricIngotFactory4,RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{})).setCapacity(1024).setEnergyConsumption(24).setProcessingSpeed(12).register(plugin);
+        (new ElectricIngotFactory(CategoryAdvancedElectricity,ElectricIngotFactory5,RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{})).setCapacity(1024).setEnergyConsumption(32).setProcessingSpeed(18).register(plugin);
         (new StoneGenerator()).register(this.plugin);
 
     }
     public void registerMiscellaneous() {
         this.registerItem(CategoryMiscellaneous,Steel_Cage,RecipeType.ENHANCED_CRAFTING_TABLE,SlimefunItems.STEEL_INGOT,SlimefunItems.STEEL_INGOT,SlimefunItems.STEEL_INGOT,new ItemStack(Material.IRON_BARS),new ItemStack(Material.IRON_BARS),new ItemStack(Material.IRON_BARS), SlimefunItems.STEEL_INGOT,SlimefunItems.STEEL_INGOT,SlimefunItems.STEEL_INGOT);
         this.registerItem(CategoryMiscellaneous,Iron_Cap,RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack(Material.IRON_NUGGET),new ItemStack(Material.IRON_NUGGET),new ItemStack(Material.IRON_NUGGET),new ItemStack(Material.IRON_NUGGET),null,new ItemStack(Material.IRON_NUGGET));
-        this.registerItem(CategoryMiscellaneous,ConcentratedFireCharge,RecipeType.MAGIC_WORKBENCH,new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE));
-        this.registerItem(CategoryMiscellaneous,ConcentratedFireChargeS,new RecipeType(new ItemStack(Material.STICK),"wand_interaction"),null,null,null,null,null,new CustomItemStack(Material.STICK,"Wand"),null,new CustomItemStack(Material.MAGMA_BLOCK,"Right Click"));
+        //this.registerItem(CategoryMiscellaneous,ConcentratedFireCharge,RecipeType.MAGIC_WORKBENCH,new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE),new ItemStack(Material.FIRE_CHARGE));
+        //this.registerItem(CategoryMiscellaneous,ConcentratedFireChargeS,new RecipeType(new ItemStack(Material.STICK),"wand_interaction"),null,null,null,null,null,new CustomItemStack(Material.STICK,"Wand"),null,new CustomItemStack(Material.MAGMA_BLOCK,"Right Click"));
         (new RadioactiveItem(CategoryMiscellaneous,Radioactivity.VERY_DEADLY, Block_of_Blistering_Ingot, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{SlimefunItems.BLISTERING_INGOT_3,SlimefunItems.BLISTERING_INGOT_3,SlimefunItems.BLISTERING_INGOT_3,SlimefunItems.BLISTERING_INGOT_3,SlimefunItems.BLISTERING_INGOT_3,SlimefunItems.BLISTERING_INGOT_3,SlimefunItems.BLISTERING_INGOT_3,SlimefunItems.BLISTERING_INGOT_3,SlimefunItems.BLISTERING_INGOT_3})).register(this.plugin);
         (new EnchantedItem(CategoryMiscellaneous,Boosted_ElectroMagnet,RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[]{SlimefunItems.IRON_DUST,SlimefunItems.REDSTONE_ALLOY,SlimefunItems.IRON_DUST,SlimefunItems.REDSTONE_ALLOY,SlimefunItems.ELECTRO_MAGNET,SlimefunItems.REDSTONE_ALLOY,SlimefunItems.IRON_DUST,SlimefunItems.REDSTONE_ALLOY,SlimefunItems.IRON_DUST,})).register(this.plugin);
         this.registerItem(CategoryMiscellaneous,Golden_Rod,RecipeType.ENHANCED_CRAFTING_TABLE,null,SlimefunItems.GOLD_18K,null,null,SlimefunItems.GOLD_18K,null,null,SlimefunItems.GOLD_18K,null);
         this.registerItem(CategoryMiscellaneous,RedstoneAlloy_Plate,RecipeType.COMPRESSOR,new SlimefunItemStack(SlimefunItems.REDSTONE_ALLOY,8));
     }
     private void registerTools() {
-        this.registerItem(CategoryTools,Hammer,RecipeType.ENHANCED_CRAFTING_TABLE,null,new ItemStack(Material.IRON_INGOT),new ItemStack(Material.STICK),null,new ItemStack(Material.STICK),new ItemStack(Material.IRON_INGOT),new ItemStack(Material.STICK),null,null);
+        this.registerItem(CategoryTools,Hammer,RecipeType.ENHANCED_CRAFTING_TABLE,null,new ItemStack(Material.IRON_INGOT),null,null,new ItemStack(Material.STICK),new ItemStack(Material.IRON_INGOT),new ItemStack(Material.STICK),null,null);
     }
     private void registerItem(ItemGroup group, SlimefunItemStack item, RecipeType type, ItemStack... items) {
         SlimefunItem sfitem = new SlimefunItem(group,item,type, items);
@@ -138,13 +135,6 @@ public class ItemSetup {
     private void registerItemNoRecipe(ItemGroup group,SlimefunItemStack item) {
         SlimefunItem sfitem = new SlimefunItem(group,item,new RecipeType(new CustomItemStack(Material.BARRIER,"Not yet implemented"),"notimplemented"),new ItemStack[]{});
         sfitem.register(this.plugin);
-    }
-    private void registerItemWandRecipe(ItemGroup group,SlimefunItemStack item,ItemStack recipe) {
-        SlimefunItem sfitem = new SlimefunItem(group,item,new RecipeType(new CustomItemStack(Material.STICK,"Magic Wand Interaction"),"magicwand"),new ItemStack[]{null,null,new CustomItemStack(Material.STICK,"Magic Wand"),null,recipe,null,null,null,null});
-        sfitem.register(this.plugin);
-    }
-    private void registerUnstableWandRecipeItem(int stability,ItemGroup group,SlimefunItemStack item,ItemStack recipe) {
-        (new UnstableItem(group, item,stability, new RecipeType(new CustomItemStack(Material.STICK, "Magic Wand Interaction"), "magicwand"), new ItemStack[]{null, null, new CustomItemStack(Material.STICK, "Magic Wand"), null, recipe, null, null, null, null})).register(this.plugin);
     }
     private void registerHelmet(ItemGroup group,SlimefunItemStack item,ItemStack x) {
         SlimefunItem sfitem = new SlimefunItem(group,item,RecipeType.ARMOR_FORGE,new ItemStack[]{x,x,x,x,null,x,null,null,null});

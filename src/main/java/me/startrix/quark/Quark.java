@@ -35,6 +35,8 @@ public final class Quark extends JavaPlugin implements SlimefunAddon {
         }
         if (Bukkit.getPluginManager().isPluginEnabled("FluffyMachines") && this.config.getBoolean("Quark-FluffyMachines")) {
             Bukkit.getConsoleSender().sendRawMessage("nice");
+            new QuarkMagicalItemsDefine();
+            MagicItemsSetup.INSTANCE.init();
         }
     }
 

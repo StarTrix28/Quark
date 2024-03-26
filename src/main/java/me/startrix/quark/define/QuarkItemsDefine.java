@@ -57,6 +57,7 @@ public final class QuarkItemsDefine {
     //Multiblock
     public static final SlimefunItemStack KiloMiner;
     public static final SlimefunItemStack MegaMiner;
+    public static final SlimefunItemStack GigaMiner;
     //Machines
     public static final SlimefunItemStack Solar_Generator5;
     public static final SlimefunItemStack Solar_Generator6;
@@ -107,8 +108,8 @@ public final class QuarkItemsDefine {
     //Miscellaneous
     public static final SlimefunItemStack Steel_Cage;
     public static final SlimefunItemStack Iron_Cap;
-    public static final SlimefunItemStack ConcentratedFireCharge;
-    public static final SlimefunItemStack ConcentratedFireChargeS;
+    //public static final SlimefunItemStack ConcentratedFireCharge;
+    //public static final SlimefunItemStack ConcentratedFireChargeS;
     public static final SlimefunItemStack Block_of_Blistering_Ingot;
     public static final SlimefunItemStack Boosted_ElectroMagnet;
     public static final SlimefunItemStack Golden_Rod;
@@ -152,6 +153,7 @@ public final class QuarkItemsDefine {
         //Multiblock
         KiloMiner = new SlimefunItemStack("KILO_MINER",Material.NETHERITE_PICKAXE,"Kilo Miner", "", "&fThis Multiblock will mine any Ores", "&fin a 15x15 area underneath it.", "&fPlace coal in", "&fits chest to fuel this machine.", "", "&a+ Silk Touch");
         MegaMiner = new SlimefunItemStack("MEGA_MINER",Material.NETHERITE_PICKAXE,"Mega Miner", "", "&fThis Multiblock will mine any Ores", "&fin a 20x20 area underneath it.", "&fPlace coal in", "&fits chest to fuel this machine.", "", "&a+ Silk Touch");
+        GigaMiner = new SlimefunItemStack("GIGA_MINER",Material.GOLDEN_PICKAXE,"Giga Miner", "", "&fThis Multiblock will mine any Ores", "&fin a 30x30 area underneath it.", "&fPlace coal in", "&fits chest to fuel this machine.", "", "&a+ Silk Touch");
         //Advanced Energy and Electricity
         Solar_Generator5 = new SlimefunItemStack("SOLAR_GENERATOR5", Material.DAYLIGHT_DETECTOR, "&bHighlyEnergized Solar Generator", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR), LoreBuilder.powerBuffer(0),LoreBuilder.powerPerSecond(512) + " (Day)", LoreBuilder.powerPerSecond(256) + " (Night)");
         Solar_Generator6 = new SlimefunItemStack("SOLAR_GENERATOR6", Material.DAYLIGHT_DETECTOR, "&bHyperEnergized Solar Generator", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR), LoreBuilder.powerBuffer(0),LoreBuilder.powerPerSecond(1024) + " (Day)", LoreBuilder.powerPerSecond(512) + " (Night)");
@@ -201,8 +203,8 @@ public final class QuarkItemsDefine {
         EnergyRod9 = new SlimefunItemStack("ENERGYROD9",Material.GOLDEN_SWORD,"Energy Rod IX",LoreBuilder.powerCharged(0,262144));
 
         //Miscellaneous
-        ConcentratedFireCharge = new SlimefunItemStack("STACKED_FIRECHARGE_UNSTABLE",Material.MAGMA_BLOCK,"&7Concentrated Fire Charge","&4&lUnstable");
-        ConcentratedFireChargeS = new SlimefunItemStack("STACKED_FIRECHARGE",Material.MAGMA_BLOCK,"&7Concentrated Fire Charge","&a&lStable&4");
+        //ConcentratedFireCharge = new SlimefunItemStack("STACKED_FIRECHARGE_UNSTABLE",Material.MAGMA_BLOCK,"&7Concentrated Fire Charge","&4&lUnstable");
+        //ConcentratedFireChargeS = new SlimefunItemStack("STACKED_FIRECHARGE",Material.MAGMA_BLOCK,"&7Concentrated Fire Charge","&a&lStable&4");
         Steel_Cage = new SlimefunItemStack("STEEL_CAGE",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDhlNjUyNTM4NWY3NDgzMjJlZWNjNDE2ODliNjkwYWExZWJiYjIxNzJlYzJjNGEyZWFjMTRmMjJkOTRlZTNiYSJ9fX0=")),"Steel Cage");
         Iron_Cap = new SlimefunItemStack("IRON_CAP",Material.IRON_INGOT,"Iron Cap");
         Block_of_Blistering_Ingot = new SlimefunItemStack("BLOCKOF_BLISTERING_INGOT",Material.GOLD_BLOCK,"Block of Blistering Ingot","&e&lAlmost Unstable",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY));
@@ -223,13 +225,10 @@ public final class QuarkItemsDefine {
         Obsidian_Pickaxe.addUnsafeEnchantment(DURABILITY,5);Obsidian_Pickaxe.addUnsafeEnchantment(DIG_SPEED,10);
         Obsidian_Axe.addUnsafeEnchantment(DURABILITY,5);Obsidian_Axe.addUnsafeEnchantment(DIG_SPEED,10);
         Obsidian_Shovel.addUnsafeEnchantment(DURABILITY,5);Obsidian_Shovel.addUnsafeEnchantment(DIG_SPEED,10);
-        Reinforced_Helmet.addUnsafeEnchantment(DURABILITY,10);Reinforced_Helmet.addUnsafeEnchantment(PROTECTION_ENVIRONMENTAL,10);
-        Reinforced_Chestplate.addUnsafeEnchantment(DURABILITY,10);Reinforced_Chestplate.addUnsafeEnchantment(PROTECTION_ENVIRONMENTAL,10);
-        Reinforced_Leggings.addUnsafeEnchantment(DURABILITY,10);Reinforced_Leggings.addUnsafeEnchantment(PROTECTION_ENVIRONMENTAL,10);
-        Reinforced_Boots.addUnsafeEnchantment(DURABILITY,10);Reinforced_Boots.addUnsafeEnchantment(PROTECTION_ENVIRONMENTAL,10);
-        Reinforced_Sword.addEnchantment(DURABILITY,2);Reinforced_Sword.addUnsafeEnchantment(DAMAGE_ALL,10);
-        Reinforced_Pickaxe.addEnchantment(DURABILITY,2);Reinforced_Pickaxe.addUnsafeEnchantment(DIG_SPEED,10);
-        Reinforced_Axe.addEnchantment(DURABILITY,2);Reinforced_Axe.addUnsafeEnchantment(DIG_SPEED,10);
-        Reinforced_Shovel.addEnchantment(DURABILITY,2);Reinforced_Shovel.addUnsafeEnchantment(DIG_SPEED,10);
+
+        Reinforced_Sword.addEnchantment(DURABILITY,10);Reinforced_Sword.addUnsafeEnchantment(DAMAGE_ALL,10);
+        Reinforced_Pickaxe.addEnchantment(DURABILITY,10);Reinforced_Pickaxe.addUnsafeEnchantment(DIG_SPEED,10);
+        Reinforced_Axe.addEnchantment(DURABILITY,10);Reinforced_Axe.addUnsafeEnchantment(DIG_SPEED,10);
+        Reinforced_Shovel.addEnchantment(DURABILITY,10);Reinforced_Shovel.addUnsafeEnchantment(DIG_SPEED,10);
     }
 }
