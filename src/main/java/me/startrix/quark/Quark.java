@@ -4,6 +4,8 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import me.startrix.quark.define.QuarkItemsDefine;
 import me.startrix.quark.define.QuarkMagicalItemsDefine;
+import me.startrix.quark.quarkaddons.FluffyMachines.FluffyMachinesDefine;
+import me.startrix.quark.quarkaddons.FluffyMachines.FluffyMachinesSetup;
 import me.startrix.quark.setup.ItemSetup;
 import me.startrix.quark.setup.MagicItemsSetup;
 import org.bukkit.Bukkit;
@@ -34,9 +36,9 @@ public final class Quark extends JavaPlugin implements SlimefunAddon {
 
         }
         if (Bukkit.getPluginManager().isPluginEnabled("FluffyMachines") && this.config.getBoolean("Quark-FluffyMachines")) {
-            Bukkit.getConsoleSender().sendRawMessage("nice");
-            new QuarkMagicalItemsDefine();
-            MagicItemsSetup.INSTANCE.init();
+            Bukkit.getConsoleSender().sendRawMessage("[Quark] FluffyMachines - Enabled");
+            new FluffyMachinesDefine();
+            FluffyMachinesSetup.INSTANCE.init();
         }
     }
 

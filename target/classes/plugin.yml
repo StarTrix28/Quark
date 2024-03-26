@@ -1,5 +1,5 @@
 name: Quark
-version: '0.5.2'
+version: '0.6'
 main: me.startrix.quark.Quark
 api-version: '1.20'
 depend:

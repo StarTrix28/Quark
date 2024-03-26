@@ -5,7 +5,7 @@ import org.bukkit.Material;
 
 public final class FluffyMachinesDefine {
     public static final SlimefunItemStack test;
-    public FluffyMachinesDefine() {};
+    public FluffyMachinesDefine() {}
     static {
         test = new SlimefunItemStack("TEST",Material.STICK,"test");
     }

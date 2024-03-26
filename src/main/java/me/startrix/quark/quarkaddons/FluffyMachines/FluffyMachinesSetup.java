@@ -7,7 +7,6 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.startrix.quark.Quark;
-import me.startrix.quark.setup.ItemSetup;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import static me.startrix.quark.define.AddonsAddonsGroupDefine.*;
