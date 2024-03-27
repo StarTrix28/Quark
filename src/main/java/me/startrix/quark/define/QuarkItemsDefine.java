@@ -44,10 +44,6 @@ public final class QuarkItemsDefine {
     public static final SlimefunItemStack Obsidian_Pickaxe;
     public static final SlimefunItemStack Obsidian_Axe;
     public static final SlimefunItemStack Obsidian_Shovel;
-    public static final SlimefunItemStack Reinforced_Helmet;
-    public static final SlimefunItemStack Reinforced_Chestplate;
-    public static final SlimefunItemStack Reinforced_Leggings;
-    public static final SlimefunItemStack Reinforced_Boots;
     public static final SlimefunItemStack Reinforced_Sword;
     public static final SlimefunItemStack Reinforced_Pickaxe;
     public static final SlimefunItemStack Reinforced_Axe;
@@ -93,6 +89,7 @@ public final class QuarkItemsDefine {
     public static final SlimefunItemStack PowerCube2;
     public static final SlimefunItemStack PowerCube3;
     public static final SlimefunItemStack PowerCube4;
+    public static final SlimefunItemStack PowerCube5;
     public static final SlimefunItemStack Cobble_Generator;
     //TechnicalGear
     public static final SlimefunItemStack EnergyRod1;
@@ -137,17 +134,13 @@ public final class QuarkItemsDefine {
         Obsidian_Leggings = new SlimefunItemStack("OBSIDIAN_LEGGINGS",Material.LEATHER_LEGGINGS, Color.fromRGB(0,0,0),"Obsidian Leggings","Brittle");
         Obsidian_Boots = new SlimefunItemStack("OBSIDIAN_BOOTS",Material.LEATHER_BOOTS, Color.fromRGB(0,0,0),"Obsidian Boots","Brittle");
         Obsidian_Sword = new SlimefunItemStack("OBSIDIAN_SWORD",Material.STONE_SWORD,"Obsidian Sword");
-        Obsidian_Pickaxe = new SlimefunItemStack("OBSIDIAN_PICKAXE",Material.DIAMOND_PICKAXE,"Obsidian Pickaxe");
+        Obsidian_Pickaxe = new SlimefunItemStack("OBSIDIAN_PICKAXE",Material.STONE_PICKAXE,"Obsidian Pickaxe");
         Obsidian_Axe = new SlimefunItemStack("OBSIDIAN_AXE",Material.STONE_AXE,"Obsidian Axe");
         Obsidian_Shovel = new SlimefunItemStack("OBSIDIAN_SHOVEL",Material.STONE_SHOVEL,"Obsidian Shovel");
-        Reinforced_Helmet = new SlimefunItemStack("REINFORCED_HELMET",Material.IRON_HELMET,"Reinforced Helmet");
-        Reinforced_Chestplate = new SlimefunItemStack("REINFORCED_CHESTPLATE",Material.IRON_CHESTPLATE,"Reinforced Chestplate");
-        Reinforced_Leggings = new SlimefunItemStack("REINFORCED_LEGGINGS",Material.IRON_LEGGINGS,"Reinforced Leggings");
-        Reinforced_Boots = new SlimefunItemStack("REINFORCED_BOOTS",Material.IRON_BOOTS,"Reinforced Boots");
-        Reinforced_Sword = new SlimefunItemStack("REINFORCED_SWORD",Material.IRON_SWORD,"Flint Sword");
-        Reinforced_Pickaxe = new SlimefunItemStack("REINFORCED_PICKAXE",Material.IRON_PICKAXE,"Flint Pickaxe");
-        Reinforced_Axe = new SlimefunItemStack("REINFORCED_AXE",Material.IRON_AXE,"Flint Axe");
-        Reinforced_Shovel = new SlimefunItemStack("REINFORCED_SHOVEL",Material.IRON_SHOVEL,"Flint Shovel");
+        Reinforced_Sword = new SlimefunItemStack("REINFORCED_SWORD",Material.IRON_SWORD,"Reinforced Sword");
+        Reinforced_Pickaxe = new SlimefunItemStack("REINFORCED_PICKAXE",Material.IRON_PICKAXE,"Reinforced Pickaxe");
+        Reinforced_Axe = new SlimefunItemStack("REINFORCED_AXE",Material.IRON_AXE,"Reinforced Axe");
+        Reinforced_Shovel = new SlimefunItemStack("REINFORCED_SHOVEL",Material.IRON_SHOVEL,"Reinforced Shovel");
         //Tools
         Hammer = new SlimefunItemStack("HAMMER",Material.IRON_AXE,"Hammer");
         //Multiblock
@@ -173,10 +166,11 @@ public final class QuarkItemsDefine {
         Capacitor12 = new SlimefunItemStack("CAPACITOR12", HeadTexture.CAPACITOR_25, "&aPetaEnergized Energy Capacitor", LoreBuilder.range(6), "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.CAPACITOR), "&8⇨ &e⚡ &764000000 J Capacity");
         Capacitor13 = new SlimefunItemStack("CAPACITOR13", HeadTexture.CAPACITOR_25, "&aExaEnergized Energy Capacitor", LoreBuilder.range(6), "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.CAPACITOR), "&8⇨ &e⚡ &7128000000 J Capacity");
         Capacitor14 = new SlimefunItemStack("CAPACITOR14", HeadTexture.CAPACITOR_25, "&aZettaEnergized Energy Capacitor", LoreBuilder.range(6), "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.CAPACITOR), "&8⇨ &e⚡ &7256000000 J Capacity");
-        PowerCube1 = new SlimefunItemStack("POWERCUBE1",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE2YjY4Mzc2YzE4MWM5YTczNDNmZWUzNjk3ZmFhY2VjMzUxMjlmYjY0ZGU1OTE0YmRiZjg2OWM2NTJjIn19fQ==")),"[WIP] Power Cube I",LoreBuilder.powerCharged(0,128));
-        PowerCube2 = new SlimefunItemStack("POWERCUBE2",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE2YjY4Mzc2YzE4MWM5YTczNDNmZWUzNjk3ZmFhY2VjMzUxMjlmYjY0ZGU1OTE0YmRiZjg2OWM2NTJjIn19fQ==")),"[WIP] Power Cube II",LoreBuilder.powerCharged(0,512));
-        PowerCube3 = new SlimefunItemStack("POWERCUBE3",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE2YjY4Mzc2YzE4MWM5YTczNDNmZWUzNjk3ZmFhY2VjMzUxMjlmYjY0ZGU1OTE0YmRiZjg2OWM2NTJjIn19fQ==")),"[WIP] Power Cube III",LoreBuilder.powerCharged(0,2048));
-        PowerCube4 = new SlimefunItemStack("POWERCUBE4",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE2YjY4Mzc2YzE4MWM5YTczNDNmZWUzNjk3ZmFhY2VjMzUxMjlmYjY0ZGU1OTE0YmRiZjg2OWM2NTJjIn19fQ==")),"[WIP] Power Cube IV",LoreBuilder.powerCharged(0,8192));
+        PowerCube1 = new SlimefunItemStack("POWERCUBE1",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE2YjY4Mzc2YzE4MWM5YTczNDNmZWUzNjk3ZmFhY2VjMzUxMjlmYjY0ZGU1OTE0YmRiZjg2OWM2NTJjIn19fQ==")),"Power Cube I",LoreBuilder.powerCharged(0,512));
+        PowerCube2 = new SlimefunItemStack("POWERCUBE2",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE2YjY4Mzc2YzE4MWM5YTczNDNmZWUzNjk3ZmFhY2VjMzUxMjlmYjY0ZGU1OTE0YmRiZjg2OWM2NTJjIn19fQ==")),"Power Cube II",LoreBuilder.powerCharged(0,8192));
+        PowerCube3 = new SlimefunItemStack("POWERCUBE3",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE2YjY4Mzc2YzE4MWM5YTczNDNmZWUzNjk3ZmFhY2VjMzUxMjlmYjY0ZGU1OTE0YmRiZjg2OWM2NTJjIn19fQ==")),"Power Cube III",LoreBuilder.powerCharged(0,131072));
+        PowerCube4 = new SlimefunItemStack("POWERCUBE4",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE2YjY4Mzc2YzE4MWM5YTczNDNmZWUzNjk3ZmFhY2VjMzUxMjlmYjY0ZGU1OTE0YmRiZjg2OWM2NTJjIn19fQ==")),"Power Cube IV",LoreBuilder.powerCharged(0,1048576));
+        PowerCube5 = new SlimefunItemStack("POWERCUBE5",PlayerHead.getItemStack(PlayerSkin.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE2YjY4Mzc2YzE4MWM5YTczNDNmZWUzNjk3ZmFhY2VjMzUxMjlmYjY0ZGU1OTE0YmRiZjg2OWM2NTJjIn19fQ==")),"Power Cube V",LoreBuilder.powerCharged(0,12582912));
         CoalGenerator3 = new SlimefunItemStack("COAL_GENERATOR3", HeadTexture.GENERATOR, "&cCoal Generator III", "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.GENERATOR), LoreBuilder.powerBuffer(512), LoreBuilder.powerPerSecond(32));
         CoalGenerator4 = new SlimefunItemStack("COAL_GENERATOR4", HeadTexture.GENERATOR, "&cCoal Generator IV", "", LoreBuilder.machine(MachineTier.GOOD, MachineType.GENERATOR), LoreBuilder.powerBuffer(1024), LoreBuilder.powerPerSecond(64));
         CoalGenerator5 = new SlimefunItemStack("COAL_GENERATOR5", HeadTexture.GENERATOR, "&cCoal Generator V", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR), LoreBuilder.powerBuffer(2048), LoreBuilder.powerPerSecond(128));
@@ -219,16 +213,16 @@ public final class QuarkItemsDefine {
         Flint_Pickaxe.addEnchantment(DURABILITY,2);Flint_Pickaxe.addEnchantment(DIG_SPEED,3);
         Flint_Axe.addEnchantment(DURABILITY,2);Flint_Axe.addEnchantment(DIG_SPEED,3);
         Flint_Shovel.addEnchantment(DURABILITY,2);Flint_Shovel.addEnchantment(DIG_SPEED,3);
-        Wooden_Helmet.setDurability((short) 10);Wooden_Chestplate.setDurability((short) 10);
-        Wooden_Leggings.setDurability((short) 10);Wooden_Boots.setDurability((short) 10);
-        Obsidian_Sword.addUnsafeEnchantment(DURABILITY,5);Obsidian_Sword.addUnsafeEnchantment(DAMAGE_ALL,10);
-        Obsidian_Pickaxe.addUnsafeEnchantment(DURABILITY,5);Obsidian_Pickaxe.addUnsafeEnchantment(DIG_SPEED,10);
-        Obsidian_Axe.addUnsafeEnchantment(DURABILITY,5);Obsidian_Axe.addUnsafeEnchantment(DIG_SPEED,10);
-        Obsidian_Shovel.addUnsafeEnchantment(DURABILITY,5);Obsidian_Shovel.addUnsafeEnchantment(DIG_SPEED,10);
+        Obsidian_Helmet.setDurability((short) 50);Obsidian_Chestplate.setDurability((short) 50);
+        Obsidian_Leggings.setDurability((short) 50);Obsidian_Boots.setDurability((short) 50);
+        Obsidian_Sword.addUnsafeEnchantment(DAMAGE_ALL,10);
+        Obsidian_Pickaxe.addUnsafeEnchantment(DIG_SPEED,10);
+        Obsidian_Axe.addUnsafeEnchantment(DIG_SPEED,10);
+        Obsidian_Shovel.addUnsafeEnchantment(DIG_SPEED,10);
 
-        Reinforced_Sword.addEnchantment(DURABILITY,10);Reinforced_Sword.addUnsafeEnchantment(DAMAGE_ALL,10);
-        Reinforced_Pickaxe.addEnchantment(DURABILITY,10);Reinforced_Pickaxe.addUnsafeEnchantment(DIG_SPEED,10);
-        Reinforced_Axe.addEnchantment(DURABILITY,10);Reinforced_Axe.addUnsafeEnchantment(DIG_SPEED,10);
-        Reinforced_Shovel.addEnchantment(DURABILITY,10);Reinforced_Shovel.addUnsafeEnchantment(DIG_SPEED,10);
+        Reinforced_Sword.addUnsafeEnchantment(DURABILITY,10);Reinforced_Sword.addUnsafeEnchantment(DAMAGE_ALL,10);
+        Reinforced_Pickaxe.addUnsafeEnchantment(DURABILITY,10);Reinforced_Pickaxe.addUnsafeEnchantment(DIG_SPEED,10);
+        Reinforced_Axe.addUnsafeEnchantment(DURABILITY,10);Reinforced_Axe.addUnsafeEnchantment(DIG_SPEED,10);
+        Reinforced_Shovel.addUnsafeEnchantment(DURABILITY,10);Reinforced_Shovel.addUnsafeEnchantment(DIG_SPEED,10);
     }
 }

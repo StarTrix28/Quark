@@ -44,28 +44,32 @@ public class EnergyRod extends SlimefunItem implements Rechargeable {
                     int WandCharge = (int) this.getItemCharge(event.getItem());
                     int WandAvailable = this.capacity - WandCharge;
                     if (component.getEnergyComponentType().equals(EnergyNetComponentType.CAPACITOR)) {
-                        if(!(WandAvailable < 0) && !(capacitorAvailable < 0)) {
+                        try {
                             if (event.getPlayer().isSneaking()) {
-                                if (capacitorCharge >= WandAvailable) {
-                                    this.addItemCharge(event.getItem(), WandAvailable);
-                                    component.removeCharge(l, WandAvailable);
-                                } else {
-                                    if (!(WandCharge == 0)) {
-                                        this.addItemCharge(event.getItem(), capacitorCharge);
-                                        component.removeCharge(l, capacitorCharge);
+                                if (!(WandAvailable <= 0)) {
+                                    if (capacitorCharge >= WandAvailable) {
+                                        this.addItemCharge(event.getItem(), WandAvailable);
+                                        component.removeCharge(l, WandAvailable);
+                                    } else {
+                                        if (!(WandCharge == 0)) {
+                                            this.addItemCharge(event.getItem(), capacitorCharge);
+                                            component.removeCharge(l, capacitorCharge);
+                                        }
                                     }
                                 }
 
-                            } else {
-                                if (WandCharge >= capacitorAvailable) {
-                                    component.addCharge(l, capacitorAvailable);
-                                    this.removeItemCharge(event.getItem(), capacitorAvailable);
-                                } else {
-                                    component.addCharge(l, WandCharge);
-                                    this.removeItemCharge(event.getItem(), WandCharge);
-                                }
+                                } else if (!(capacitorAvailable <= 0)) {
+                                    if (WandCharge >= capacitorAvailable) {
+                                        component.addCharge(l, capacitorAvailable);
+                                        this.removeItemCharge(event.getItem(), capacitorAvailable);
+                                    } else {
+                                        component.addCharge(l, WandCharge);
+                                        this.removeItemCharge(event.getItem(), WandCharge);
+                                    }
 
-                            }
+                                }
+                        } finally {
+                            int rands = 1;
                         }
                     } else {event.getPlayer().sendMessage("This is not capacitor");}
                 }

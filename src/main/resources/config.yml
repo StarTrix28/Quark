@@ -1,5 +1,7 @@
 QuarkBase: true
-QuarkMagic: true
+PowerCubeDecimals: 3
+#Experimental:
+QuarkMagic: false
 
 #Addon expansions
-Quark-FluffyMachines: true #Not yet implemented
+Quark-FluffyMachines: false #Not yet implemented

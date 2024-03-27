@@ -4,11 +4,8 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import me.startrix.quark.define.QuarkItemsDefine;
 import me.startrix.quark.define.QuarkMagicalItemsDefine;
-import me.startrix.quark.quarkaddons.FluffyMachines.FluffyMachinesDefine;
-import me.startrix.quark.quarkaddons.FluffyMachines.FluffyMachinesSetup;
 import me.startrix.quark.setup.ItemSetup;
 import me.startrix.quark.setup.MagicItemsSetup;
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.annotation.Nonnull;
@@ -21,11 +18,19 @@ public final class Quark extends JavaPlugin implements SlimefunAddon {
     public Quark() {
         this.config = new Config(this);
     }
-
+    private static void validateInstance() {
+        if (instance == null) {
+            throw new IllegalStateException("Cannot invoke static method, Slimefun instance is null.");
+        }
+    }
+    public static Config getCfg() {
+        validateInstance();
+        return instance.config;
+    }
     @Override
     public void onEnable() {
         setInstance(this);
-        this.getCommand("itemstack").setExecutor(new Commands());
+        //this.getCommand("itemstack").setExecutor(new Commands());
         if (this.config.getBoolean("QuarkBase")) {
             new QuarkItemsDefine();
             ItemSetup.INSTANCE.init();
@@ -35,11 +40,11 @@ public final class Quark extends JavaPlugin implements SlimefunAddon {
             MagicItemsSetup.INSTANCE.init();
 
         }
-        if (Bukkit.getPluginManager().isPluginEnabled("FluffyMachines") && this.config.getBoolean("Quark-FluffyMachines")) {
+        /*if (Bukkit.getPluginManager().isPluginEnabled("FluffyMachines") && this.config.getBoolean("Quark-FluffyMachines")) {
             Bukkit.getConsoleSender().sendRawMessage("[Quark] FluffyMachines - Enabled");
             new FluffyMachinesDefine();
             FluffyMachinesSetup.INSTANCE.init();
-        }
+        }*/
     }
 
     @Override
