@@ -9,16 +9,17 @@ import io.github.thebusybiscuit.slimefun4.implementation.handlers.SimpleBlockBre
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
-import me.startrix.quark.libraries.magicalenergy.MagicalEnergyNet;
+import me.startrix.quark.core.magicalenergy.MagicalEnergyNet;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
+
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import static me.startrix.quark.define.QuarkMagicalItemsDefine.CategoryEnergyMagic;
-import static me.startrix.quark.define.QuarkMagicalItemsDefine.Magical_Energy_Regulator;
+import static me.startrix.quark.quarkmagic.QuarkMagicalItemsDefine.CategoryEnergyMagic;
+import static me.startrix.quark.quarkmagic.QuarkMagicalItemsDefine.Magical_Energy_Regulator;
 
 public class MagicalEnergyRegulator extends SlimefunItem implements HologramOwner {
     @ParametersAreNonnullByDefault

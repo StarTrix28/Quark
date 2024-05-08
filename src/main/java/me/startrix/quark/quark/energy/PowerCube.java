@@ -25,7 +25,7 @@ import java.text.MessageFormat;
 import java.util.Collection;
 import java.util.List;
 
-import static me.startrix.quark.define.QuarkItemsDefine.CategoryAdvancedElectricity;
+import static me.startrix.quark.quark.QuarkItemsDefine.CategoryAdvancedElectricity;
 
 public class PowerCube extends SlimefunItem implements EnergyNetComponent, Rechargeable, HologramOwner {
     private final int capacity;

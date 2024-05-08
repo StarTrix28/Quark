@@ -9,8 +9,9 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.startrix.quark.Quark;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
-import static me.startrix.quark.define.AddonsAddonsGroupDefine.*;
-import static me.startrix.quark.quarkaddons.FluffyMachines.FluffyMachinesDefine.*;
+
+import static me.startrix.quark.AddonsAddonsGroupDefine.CategoryFluffyMachines;
+import static me.startrix.quark.quarkaddons.FluffyMachines.FluffyMachinesDefine.test;
 
 public class FluffyMachinesSetup {
     public static final FluffyMachinesSetup INSTANCE = new FluffyMachinesSetup();

@@ -4,8 +4,8 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import me.startrix.quark.libraries.magicalenergy.MagicalEnergyNetComponent;
-import me.startrix.quark.libraries.magicalenergy.MagicalEnergyNetComponentType;
+import me.startrix.quark.core.magicalenergy.MagicalEnergyNetComponent;
+import me.startrix.quark.core.magicalenergy.MagicalEnergyNetComponentType;
 import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;

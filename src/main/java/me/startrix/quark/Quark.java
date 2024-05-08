@@ -2,10 +2,10 @@ package me.startrix.quark;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
-import me.startrix.quark.define.QuarkItemsDefine;
-import me.startrix.quark.define.QuarkMagicalItemsDefine;
-import me.startrix.quark.setup.ItemSetup;
-import me.startrix.quark.setup.MagicItemsSetup;
+import me.startrix.quark.quark.ItemSetup;
+import me.startrix.quark.quark.QuarkItemsDefine;
+import me.startrix.quark.quarkmagic.MagicItemsSetup;
+import me.startrix.quark.quarkmagic.QuarkMagicalItemsDefine;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.annotation.Nonnull;

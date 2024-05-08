@@ -3,13 +3,14 @@ package me.startrix.quark.quarkmagic.energymagic;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineFuel;
-import me.startrix.quark.libraries.magicalenergy.AMagicalGenerator;
+import me.startrix.quark.core.magicalenergy.AMagicalGenerator;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.ParametersAreNonnullByDefault;
-import static me.startrix.quark.define.QuarkMagicalItemsDefine.*;
+
+import static me.startrix.quark.quarkmagic.QuarkMagicalItemsDefine.*;
 
 public class MagicEnergyGenerator  extends AMagicalGenerator {
     @ParametersAreNonnullByDefault

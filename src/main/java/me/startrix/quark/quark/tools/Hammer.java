@@ -2,11 +2,11 @@ package me.startrix.quark.quark.tools;
 
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import me.startrix.quark.define.QuarkItemsDefine;
+import me.startrix.quark.quark.QuarkItemsDefine;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
-import static me.startrix.quark.define.QuarkItemsDefine.CategoryTools;
+import static me.startrix.quark.quark.QuarkItemsDefine.CategoryTools;
 
 public class Hammer extends SlimefunItem {
     public Hammer() {

@@ -13,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.Optional;
 
-import static me.startrix.quark.define.QuarkItemsDefine.CategoryTechnicalGear;
+import static me.startrix.quark.quark.QuarkItemsDefine.CategoryTechnicalGear;
 public class EnergyRod extends SlimefunItem implements Rechargeable {
     private final int capacity;
 

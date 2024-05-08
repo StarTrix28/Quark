@@ -5,9 +5,9 @@ import io.github.thebusybiscuit.slimefun4.core.handlers.BlockUseHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.items.SimpleSlimefunItem;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.common.ChatColors;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import me.startrix.quark.libraries.magicalenergy.MagicalEnergyNet;
-import me.startrix.quark.libraries.magicalenergy.MagicalEnergyNetComponent;
-import me.startrix.quark.libraries.magicalenergy.MagicalEnergyNetComponentType;
+import me.startrix.quark.core.magicalenergy.MagicalEnergyNet;
+import me.startrix.quark.core.magicalenergy.MagicalEnergyNetComponent;
+import me.startrix.quark.core.magicalenergy.MagicalEnergyNetComponentType;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -16,8 +16,8 @@ import org.bukkit.inventory.ItemStack;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import static me.startrix.quark.define.QuarkMagicalItemsDefine.CategoryEnergyMagic;
-import static me.startrix.quark.define.QuarkMagicalItemsDefine.Magical_Energy_Connector;
+import static me.startrix.quark.quarkmagic.QuarkMagicalItemsDefine.CategoryEnergyMagic;
+import static me.startrix.quark.quarkmagic.QuarkMagicalItemsDefine.Magical_Energy_Connector;
 
 public class MagicalEnergyConnector extends SimpleSlimefunItem<BlockUseHandler> implements MagicalEnergyNetComponent {
     @ParametersAreNonnullByDefault

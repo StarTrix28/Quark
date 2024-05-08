@@ -8,8 +8,8 @@ import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
 
-import static me.startrix.quark.define.QuarkItemsDefine.CategoryAdvancedElectricity;
-import static me.startrix.quark.define.QuarkItemsDefine.Cobble_Generator;
+import static me.startrix.quark.quark.QuarkItemsDefine.CategoryAdvancedElectricity;
+import static me.startrix.quark.quark.QuarkItemsDefine.Cobble_Generator;
 
 public final class StoneGenerator extends AContainer {
         public static final int TIME = 1;
